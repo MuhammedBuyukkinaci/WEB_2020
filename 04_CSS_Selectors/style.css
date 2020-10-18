@@ -1,0 +1,117 @@
+p{
+    color: yellow;
+    font-size: 20px;
+}
+
+.red{
+    color: red;
+}
+
+.blue{
+    color: blue;
+}
+
+.f24{
+    font-size: 24px;
+}
+
+.f36{
+    font-size: 36px;
+}
+
+
+h2{
+    font-size: 50px !important ;
+}
+
+#header{
+    font-size: 35px;
+}
+
+.box{
+    border: 1px solid purple;
+}
+
+.sidebyside{
+   width:200px;
+   height: 200px;
+   display: inline-block;
+   border: 5px solid orange;
+   background-color:turquoise;
+} 
+
+div p{
+   border: 3px solid green;
+}
+
+p[title]{
+    border: 3px solid blue;
+}
+
+p[title="title1"]{
+    border: 3px solid blue;
+    background-color: brown;
+}
+
+/*Pseudo Element*/
+h5::first-line{
+    color:brown;
+    word-spacing: 3px;
+    letter-spacing: 2px;
+}
+
+p.box::first-letter{
+    font-size: 50px;
+}
+
+/*Pseudo Class*/
+
+ul li:first-child{
+    background-color: red;
+}
+
+a {
+    padding: 5px 8px;
+    text-decoration: none;
+    display: block;
+    width: 80px;
+    border: 1px solid gray;
+    margin-bottom: 10px;
+}
+
+a:link{
+    color: red;
+}
+
+a:visited{
+    color: gray;
+}
+
+a:hover{
+    color: white;
+    background: green;
+}
+
+a:active{
+    color: green;
+    background: gold ;
+}
+
+span{
+    display: none;
+    background: yellow;
+    padding: 20px;
+}
+
+div:hover span{
+    display: block ;
+}
+
+/*Colors*/
+#rgb{
+    background-color: rgb(200, 200, 200);
+}
+
+#rgba{
+    background-color: rgba(200, 200, 200,0.5);
+}
