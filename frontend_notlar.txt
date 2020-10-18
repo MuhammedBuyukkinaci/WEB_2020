@@ -1,0 +1,16 @@
+HTML:
+1) html etiketi body ve head etiketlerinden oluşur.
+2) head altındaki meta etiketleri arama motorları açısından önemlidir.
+3) <!DOCTYPE html> ise HTML5 olduğuna işaret eder.
+4) h1'den h6'ya kadar başlık etiketi var. h1'den h6'ya doğru büyüklük ve önem azalıyor.
+5) SEO kriterlerine göre, h1'den 1 html dosyasında 1 tane, h2'den ise 4 tane olması idealdir.
+6) Etiket kullanmanın avantajını, css işlemi uygularken görüyoruz. Etiketsiz yazıya css operasyonu yapılmıyor.
+7) b ve strong etiketi aynıdır(kalın). i ile em etiketi aynıdır(italik). u ile ins etiketi (altı çizili) aynıdır. del üstü çizilmiş yazı için kullanılan etikettir.
+8) <hr> ise yatay çizgi çekmek için kullanılır.
+9) mark etiketi ise sarı arka plan yapmak için kullanılır.
+10) ul ve ol list oluşturmak için kullanılan etiketlerdir. li element'i temsiz eder.
+11) img etiketinin alt attribute'ü resim olmadığında yazan yazıdır.
+12) a etiketi inline bir etikettir, p etiketi ise inline değildir yeni satıra geçer.
+13) Arama motorları anlamsal etiketleri (semantik elements) severler.
+
+CSS:

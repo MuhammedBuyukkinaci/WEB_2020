@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <a href="https://muhammedbuyukkinaci.com">website</a>
+
+    <br>
+    <h4>Change font type</h4>
+    <b>Lorem</b> <i>ipsum</i> <u>dolor</u>
+
+    <h1>1st H1</h1>
+
+    <br>
+
+    <hr>
+
+    <mark>ipsum</mark> dolor <del>sit</del> amet, consectetur adipisicing elit. Laborum, dignissimos?
+
+    <h4>List in the list</h4>
+    <ul>
+        <li>
+            <p>paragraf</p>
+            <ul>
+                <li>e1</li>
+                <li>e2</li>
+            </ul>
+        </li>
+        <li>e2</li>
+        <li>e3</li>
+
+    </ul>
+
+    <h4>Unordered List</h4>
+    <ol start="5">
+        <li>e1</li>
+        <li>e2</li>
+        <li>e3</li>
+    </ol>
+    <h4>Ordered List</h4>
+    <ol start="5" type="i">
+        <li>e1</li>
+        <li>e2</li>
+        <li>e3</li>
+    </ol>
+
+    <h4>Images</h4>
+
+    <img src="mbk.jpg" alt="Muhammed" width="100px" height="300">
+    <br>
+    <img src="https://upload.wikimedia.org/wikipedia/tr/b/bb/Fred_%C3%87akmakta%C5%9F.jpg" alt="">
+
+    <br>
+
+    <h4>Formlar</h4>
+
+    <!-- Action kaydedilen formun nereye gönderileceğini söyler-->
+    <form action="/Home/Register">
+
+        <p>
+            Ad: <input type="text" placeholder="lütfen adinizi giriniz" name="ad" required>
+        </p>
+
+        <p>
+            Soyad: <input type="text" name="soyad" required>
+        </p>
+
+        <p>
+            Email: <input type="email" name="email" required>
+        </p>
+
+        <p>
+            Erkek <input type="radio" name="cinsiyet">
+            Kadın <input type="radio" name="cinsiyet">
+        </p>
+
+        <p>Beni Hatırla <input type="checkbox" name="benihatirla"></p>
+
+        <p>Hobiler
+            <br>
+            Sinema <input type="checkbox" name="hobi">
+            Kitap <input type="checkbox" name="hobi">
+            Tiyatro <input type="checkbox" name="hobi">
+        </p>
+
+        <p>
+            <select name="sehir" id="">
+                <option value="">İstanbu</option>
+                <option value="">Ankara</option>
+                <option value="">İzmir</option>
+            </select>
+        </p>
+
+        <p>
+            <select multiple name="sehirler" id="">
+                <option value="">İstanbu</option>
+                <option value="">Ankara</option>
+                <option value="">İzmir</option>
+            </select>
+        </p>
+
+        <input type="submit" value="Kaydet">
+
+    </form>
+
+    <h4>Tablolar</h4>
+
+    <!--Border Tabloya çizgiler koyuyor-->
+    <table border="1" width="60%">
+        <!-- table header-->
+
+        <thead>
+            <tr>
+                <th width = "200px;">column1</th>
+                <th width= "200px;">column2</th>
+                <th>column3</th>
+            </tr>
+        </thead>
+
+        <!-- table row-->
+        <tbody>
+            <tr>
+                <!--table data-->
+                <td>a</td>
+                <td>b</td>
+                <td>c</td>
+            </tr>
+
+            <tr>
+                <!--table data-->
+                <td>a</td>
+                <td>b</td>
+                <td>c</td>
+            </tr>
+
+            <tr>
+                <!--table data-->
+                <td colspan="3">c</td>
+            </tr>
+
+            <tr>
+                <!--table data-->
+                <td>a</td>
+                <td colspan="2">c</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h4>Linkler</h4>
+
+    <a id="Link_To_Temp_HTML" href="temp.html">Link_To_Temp_HTML</a>
+
+    <br>
+
+    <a href="google.com">Link_To_Google</a>
+
+    <br>
+
+    <a href="mbk.jpg">Link_to_My_Pic</a>
+    
+    <br>
+
+    <a href="temp.zip">Link_to_Zip</a>
+
+    <br>
+
+    <a href="temp.html">
+        <img src="mbk.jpg" width="500px" alt="">
+    </a>
+
+    <br>
+
+    <a href="temp.html" target="_blank">
+        <img src="mbk.jpg" width="500px" alt="">
+    </a>
+    <br>
+    <!--Başa Dönme Linkine tıklarsan, Link_To_Temp_HTML a göndeririz aynı sayfa içinde. -->
+    <a href="#Link_To_Temp_HTML">Başa Dönme Linki</a>
+
+    <h4>div ve span</h4>
+
+    <!--Div'i gruplamak için kullanıyoruz Div block etiketidir.-->
+    <!--Span block etiket değildir, inline etiketidir-->
+
+    <div>
+        <h5>BAŞLIK</h5>
+        <p>Lorem ipsum dolor sit amet consectetur <span> umendi laboriosam</span> nesciunt obcaecati dolorem qui maxime possimus!</p>
+    </div>
+
+    <div id= "HEADER">
+        HEADER
+    </div>
+
+    
+
+            <!-- header-->
+
+    <!--menu--> <!--içerik-->
+
+    <!--footer-->
+
+
+    <h4>Iframes</h4>
+
+    <!--iframe, html içine html gömmek için kullanılır-->
+
+    <iframe src="temp.html" frameborder="0"></iframe>
+
+</body>
+
+</html>
