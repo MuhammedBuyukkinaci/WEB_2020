@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+
+
+        #container{
+            background: gray;
+        }
+
+        img {
+            width: 100px;
+            float: left;
+        }
+
+        p {
+            border: 1px solid gray;
+        }
+
+        .clear {
+            overflow: auto;
+        }
+
+        .box {
+            width: 170px;
+            height: 170px;
+        }
+
+        #first {
+            background: red;
+        }
+
+        #second {
+            background: blue;
+        }
+
+        #third {
+            background: green;
+        }
+
+        #first_{
+            display: none;
+        }
+        #second_{
+            display: block;
+        }
+
+        span{
+            background-color: orange;
+        }
+
+        .positioned{
+            background-color: purple;
+            position: relative;
+            top: 100px;
+            left: 100px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, quaerat?</p>
+
+    <p class="clear">
+        <img src="mbk.jpg" alt="">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Soluta deleniti aperiam ipsum sint alias quis maxime est face
+        re atque modi quam omnis repudiandae error, laudantium consectetur ut ad aut? Cum?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Aperiam dolorum veritatis assumenda
+        amet officiis. Facilis illum eius at minus ea.
+    </p>
+
+
+    <hr>
+    <hr>
+
+    <h2>Floating Divs</h2>
+
+    <div id="container">
+        <div id="first" class="box"></div>
+        <div id="second" class="box"></div>
+        <div id="third" class="box"></div>
+    </div>
+
+    <h2>CSS Display</h2>
+
+    <div id="first_" style="width: 200px; height: 200px; background: red; margin: 5px;">
+        deneme1
+    </div> 
+
+    <div id="second_" style="width: 200px; height: 200px; background: red; margin: 5px;">
+        deneme2
+    </div> 
+
+    <span>deneme1</span>
+    <span>deneme2</span>
+    <span>deneme3</span>
+
+    <h2>CSS POsitioning</h2>
+
+    <div class="positioned">Lorem ipsum dolor sit amet.</div>
+
+
+
+</body>
+
+</html>
