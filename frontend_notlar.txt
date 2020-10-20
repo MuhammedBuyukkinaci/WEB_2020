@@ -44,4 +44,6 @@ p[title="title1"][lang="13"]{
 8) div'in display diye bir özelliği var, bu özellik, none, inline, block, inline-block değerleri alabiliyor. div default olarak block'tur, yani satırı olduğu gibi kaplar. JS ile beraber daha çok kullanılan bir özellik.
 9) a'nın ve span'ın display özellği ise inline'dır. Inline elemanlara yükseklik vermek için display'i block'a çevirilmeli ve sonra yüksekliği değiştirilmeli.
 10) position'ın alabilceği 5 farklı değer var: static, relative, fixed, absolute, sticky. Default'u static'tir. Eğer ki bir div'in sabit olarak sürekli browser'da görünmesini istiyorsak, position'ı fixed yapmalıyız. Sticky ise menü hazırlarken kullanılabilir.
+12) margin, border ve paddingi le 2 farklı model yapısı kullanılabilir. content model: box-sizing: content-box olan modellerdir, bu modellerde padding ve border'ın genişlikleri, width'in üzerine eklenir. , box model: box-sizing: border-box olan modellerdir, bu modellerde padding ve border'ın genişlikleri, width'in içindedir.
 
+13) Tag'i yatay olarak center etmek için, margin: auto kullanılmalı.
