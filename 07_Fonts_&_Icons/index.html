@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/6839b859a8.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 16px;
+        }
+
+        p {
+            font-size: 30px;
+        }
+
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 200%;
+        }
+
+        h2 {
+            font-size: 2em;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        i {
+            color: red;
+            font-size: 20px;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .italic {
+            font-style: italic;
+        }
+
+        .link {
+            color: aqua;
+            text-decoration: none;
+        }
+
+        h4{
+            font-size: 22px;
+            line-height: 150%;
+            word-spacing: 3px;
+            text-indent: 20px;
+            letter-spacing: 2px;
+        }
+
+        #first{
+            text-align: right;
+        }
+        #second{
+            text-align: center;
+        }
+        #third{
+            text-align: left;
+        }
+        #fourth{
+            border: 1px solid rgb(0,0,0,0.4);
+            text-align: left;
+            column-count: 2;
+            column-rule: 1px solid gray;
+        }
+        .fifth{
+            text-align: justify;
+        }
+
+        ul{
+            background-color: red;
+            list-style-type: none;
+            border: 10 px solid #ddd;
+            padding: 20px;
+        }
+
+        ul li{
+            background-color: bisque;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        ul li:last-child{
+            border-bottom: none;
+        }
+
+        ol{
+            background-color: #f1f1f1;
+            list-style-type: none;
+            padding: 10px 20px;
+            border: 10 px solid green;
+        }
+            
+        
+
+    </style>
+
+</head>
+
+<body>
+
+    <h3>FONTS</h3>
+    <br>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Voluptatem nostrum, rerum distinctio suscipit
+        placeat dignissimos hic quasi sint dolores voluptates?
+    </p>
+
+    <!--font size of h1 is double of body's font size-->
+    <!--Font family can be searched over the internet-->
+    <!--Google fonts-->>
+    <h1>Lorem ipsum dolor sit amet.</h1>
+
+    <h2>Lorem ipsum dolor sit amet.</h2>
+
+    <br><br>
+
+    <h3>ICONS</h3>
+
+    <i class="fab fa-amazon"></i>
+
+    <br>
+
+    <i class="fab fa-facebook fa-10x"></i>
+
+    <ul class="fa-ul">
+        <li>
+            <span class="fa-li">
+                <i class="fas fa-check-square"></i>
+            </span>
+            List
+        </li>
+
+        <li>
+            <span class="fa-li">
+                <i class="fas fa-check-square"></i>
+            </span>
+            List
+        </li>
+    </ul>
+
+    <h3>TEXT DECORATION</h3>
+
+    <h4>Lorem ipsum dolor sit amet, 
+        <span class="bold italic"> 
+            <a class="link" href="#">
+                consectetur
+            </a> 
+        </span>
+        adipisicing elit. Quis, a?
+    </h4>
+
+    <h3>TEXT ALIGNMENT</h3>
+
+    <!-- Hizalama (alignment, block içinde yapılır. Inline tag'lere, alighment etki etmez) -->
+    <p id="first">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam facilis debitis, laborum illum perspiciatis nisi accusantium laboriosam fugiat quidem accusamus maxime neque, reprehenderit praesentium earum odit voluptatibus amet rerum atque.</p>
+    <p id="second">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam facilis debitis, laborum illum perspiciatis nisi accusantium laboriosam fugiat quidem accusamus maxime neque, reprehenderit praesentium earum odit voluptatibus amet rerum atque.</p>
+    <p id="third">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam facilis debitis, laborum illum perspiciatis nisi accusantium laboriosam fugiat quidem accusamus maxime neque, reprehenderit praesentium earum odit voluptatibus amet rerum atque.</p>
+
+    <p id="fourth">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam facilis debitis, laborum illum perspiciatis nisi accusantium laboriosam fugiat quidem accusamus maxime neque, reprehenderit praesentium earum odit voluptatibus amet rerum atque.</p>
+
+    <p id="fifth">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam facilis debitis, laborum illum perspiciatis nisi accusantium laboriosam fugiat quidem accusamus maxime neque, reprehenderit praesentium earum odit voluptatibus amet rerum atque.</p>
+
+
+    <p style="box-shadow: 0 0 0 10px rgba(0,0,0.06);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nihil iusto placeat mollitia ad repellat ipsa autem aspernatur reprehenderit doloribus quas quidem dolorem sit magnam, rerum esse ea, quisquam eos!</p>
+
+    <br><br>
+    <h3>Styling Lists</h3>
+
+    <ul>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+    </ul>
+
+    <ol>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+    </ol>
+
+</body>
+
+</html>
