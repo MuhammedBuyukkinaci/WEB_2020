@@ -12,6 +12,7 @@ HTML:
 11) img etiketinin alt attribute'ü resim olmadığında yazan yazıdır.
 12) a etiketi inline bir etikettir, p etiketi ise inline değildir yeni satıra geçer.
 13) Arama motorları anlamsal etiketleri (semantik elements) severler.
+14) <a href="img/mbk.jpg" target="_blank"> etiketi ile, target = "_blank" başk bir sekmede açılsın anlamına gelir.
 
 CSS:
 1) 3 çeşit css kodu yazma türü imkanı var: Inline, Internal ve External.
@@ -48,4 +49,16 @@ p[title="title1"][lang="13"]{
 12) Tag'i yatay olarak center etmek için, margin: auto kullanılmalı.
 13) Bir web uygulamasını en son test ederken, sadece chrome'da değil, safari ve firefox'da da test etmeliyiz.
 14) Google Fonts'u, font tipi seçerken kullanabiliriz.
-15) box-shadow, bir tag'in(p veya div vs.) arkasında gölge çıkmasını sağlayan bir css özelliğidir
+15) box-shadow, bir tag'in(p veya div vs.) arkasında gölge çıkmasını sağlayan bir css özelliğidir. box-shadow kullanılırken "-webkit-box-shadow: 10px 10px;" ve "-moz-box-shadow: 10px 10px;" gibi css olarak kodlanmalıdır.Box shadow ve hover beraber kullanılabilir.
+16)Bir butonun üzerine geldikten birkaç saniye sonra değişmesi, transition olayı olarak ifade edilir. -webkit ve -moz özellikleri de tüm tarayıcılarda sorunsuz çalışması için yapıyoruz. transition içinde, transition-timing-function diye bir parametre var, bu parametre ease, linear, ease-in, ease-out, ease-in-out olabiliyor. Bize transition'ın hızını ayarlamaya imkan sağlıyor.
+17)css içine aşağıdaki gibi bir kod yazarak, padding ve margin değerlerini 0'layabiliriz.
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+18) cursor: pointer ile mouse'un ucunu el yapabiliyoruz hover olayında.
+19) img içine "object-fit: cover" css kodunu verirsek, resmin boyutları korunuyor ama bazı kısımları kesiliyor. object fit; cover gibi contain, fill(default), none değerleri de alabilir.
+20) Tarayıcının görünen alanına ViewPort denir.
+21) linear-gradient ile background-image'daki renklerin farklılaşmasını sağlarız.
+22) "text-align: center;" ile yazı ortalanabilir.

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Trispace:wght@200&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/6839b859a8.js" crossorigin="anonymous"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Trispace', sans-serif;
+        }
+
+        #gallery {
+            width: 1200px;
+            margin: 20px auto;
+        }
+
+        .item-container {
+            width: 25%;
+            float: left;
+            padding: 10px;
+        }
+
+        .gallery-item {
+            border: 1px solid #ccc;
+        }
+
+        .gallery-item img {
+            width: 100%;
+        }
+
+        .description {
+            text-align: center;
+
+        }
+
+        .gallery-item:hover {
+            cursor: pointer;
+            border: 3px solid red;
+        }
+
+        .header {
+            background: red;
+            background-image: linear-gradient(rgba(102, 255, 102, 0.7), rgba(230, 255, 230, 0.7)),
+                url(img/ny.jpeg);
+            height: 95vh;
+            background-size: cover;
+            background-position: top;
+
+            position: relative;
+
+        }
+
+        .heading {
+            text-transform: uppercase;
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            text-align: center;
+            transform: translate(-50%, -50%)
+        }
+
+        .heading-main {
+            display: block;
+            font-size: 50px;
+            letter-spacing: 15px;
+        }
+
+        .heading-sub {
+            display: block;
+            font-size: 30px;
+            letter-spacing: 5px;
+        }
+
+        .clipper {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 87%);
+        }
+
+        .logo-box {
+            position: absolute;
+        }
+
+        input[type="text"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 7px 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <h4>Gallery</h4>
+    <div id="gallery">
+
+        <div class="item-container">
+
+            <div class="gallery-item">
+                <a href="img/mbk.jpg" target="_blank">
+                    <img src="img/mbk.jpg" alt="">
+                </a>
+
+                <div class="description">
+                    description about image
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="item-container">
+
+            <div class="gallery-item">
+                <a href="img/mbk.jpg" target="_blank">
+                    <img src="img/mbk.jpg" alt="">
+                </a>
+
+                <div class="description">
+                    description about image
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="item-container">
+
+            <div class="gallery-item">
+                <a href="img/mbk.jpg" target="_blank">
+                    <img src="img/mbk.jpg" alt="">
+                </a>
+
+                <div class="description">
+                    description about image
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="item-container">
+
+            <div class="gallery-item">
+                <a href="img/mbk.jpg" target="_blank">
+                    <img src="img/mbk.jpg" alt="">
+                </a>
+
+                <div class="description">
+                    description about image
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+    <br><br><br><br><br><br>
+    <h4>Background Image</h4>
+    <br><br><br><br><br><br>
+    <header class="header clipper">
+
+        <div class="logo-box">
+            <img src="img/bg.jpg" style="width: 20px; height: 20px;" alt="">
+        </div>
+
+        <h1 class="heading">
+            <span class="heading-main">Main Heading Title</span>
+            <span class="heading-sub">Sub Title</span>
+
+        </h1>
+    </header>
+
+    <br><br><br><br><br><br>
+
+    <header class="header">
+
+    </header>
+
+    <h4>Form Biçimlendirme</h4>
+
+    <div>
+        <label for="fullName">fullName</label>
+        <input type="text" name="fullName">
+    </div>
+    <div>
+        <label for="email">email</label>
+        <input type="text" name="email">
+    </div>
+    <div>
+        <label for="message">message</label>
+        <textarea name="message"></textarea>
+    </div>
+    <div>
+        <label for="country">country</label>
+        <select name="country" id="">
+            <option value="türkiye">türkiye</option>
+            <option value="almanya">almanya</option>
+        </select>
+    </div>
+    
+    <input type="submit" value="submit">
+
+
+
+
+
+
+
+</body>
+
+</html>
