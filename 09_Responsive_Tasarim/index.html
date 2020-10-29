@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <meta name="viewport" content="width=device-width"> 
+
+    <style>
+
+        body{
+            background-color: blue;
+        }
+
+        h1{
+            font-size: 20px;
+        }
+
+        @media screen and (max-width: 700px){
+            h1{
+                font-size: 16px;
+            }
+            body{
+            background-color: red;
+            }
+        }
+
+        @media screen and (max-width: 400px){
+            h1{
+                font-size: 12px;
+            }
+            body{
+            background-color: green;
+            }
+            .imagediv{
+                border: 3px solid red;
+            }
+
+        
+        }
+
+        img{
+            /*max-width yüzde 100 yaptığımızda, resim yüzde 100'den daha fazla büyümez*/
+            max-width: 100%;
+            height: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Media Queries</h2>
+    <h1 >Lorem ipsum dolor sit.</h1>
+
+    <h2>Responsive Image</h2>
+    
+    <div class="imagediv">
+    <img src="img/ny.jpeg" alt="">
+    </div>
+
+</body>
+</html>
