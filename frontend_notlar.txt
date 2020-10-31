@@ -210,3 +210,44 @@ Padding-bottom ve Padding-top beraber kullanmak için py, Padding-right ve Paddi
 12) Inline bir etiketi block etiketi yapmak için d-block, block bir etiketi inline bir etiket yapmak için ise d-inline class'ı kullanılmalıdır. d-none ile de display'ini none yapabiliyoruz.
 
 13) Tabloyu BS ile kullanabilmek için, tablonun class'ına table yazmalıyız. table-dark class'ı verirsek tablonun arka planına karanlık olur. table-stripped ile ardışık satırları farklılaştırıyoruz. table-bordered ile border ekleyebiliyoruz. table-ghover ile hover olayını etkin kılıyoruz. table-sm ile tabloyu küçültebiliyoruz. table-danger, table-primary ile thead veya table'a renk verebiliyoruz. Tabloda çok kolon olması durumunda, tabloyu class'ı table-responsive olan bir div içine alıyoruz.
+
+14) Liste elemanı oluşturmak için, ul'ye list-group class'ı verilebilir. list-group-item da li elemanlarına verilebilir. list-group-item-action ile hover olayı olan bir li elemanı oluşturabiliyoruz.
+
+15) Sayfada kaybolan kuyu yapmak için Jquery 'ni minified versiyonu html içinde olduğunda, aşağıdaki gibi bir kod gerekir.
+
+<div class="alert alert-success mb-3 alert-dismissable fade show">
+        Lorem ipsum dolor sit amet.
+        <button class="close" type="button" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+    </div>
+
+16) Sayfayı ortalamak için ve sağ ile solda eşit boşluk bırakmak için w-75 mx-auto class'larını body içine vermeliyiz.
+
+17) Bir foto ve yanımda resim olacak şekilde bir media objesini aşağıdaki kod ile oluşturabiliriz.
+
+<div class="media mt-5">
+	<img class="mr-3" src="img/mbk.jpg" alt="">
+
+	<div class="media-body">
+	<h5>Lorem, ipsum dolor.</h5>
+	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nulla iure quibusdam veniam dignissimos pariatur, reiciendis ipsum, expedita ratione ut quod quas sequi debitis at voluptate suscipit tempore. Rem, ad?</p>
+</div>
+
+18) img tag'lerine, img-fluid class'ı verilebilir. Böylece, eğer ki resim küçük bir tarayıcıda açılırsa, resim orantısal biçimde küçülür. Eğer ki resmin boyutundan daha büyük bir ebatta açılırsa da büyümez.
+
+19) BS'de default olarak clearfix class'ı var. Image'lera verildiğinde, img etiketinden sonraki tag yeni satırdan başlar.
+
+20) Resmi sağa veya sola götürmek için direkt olarak float-right veya float-left class'ları kullanılabilir.
+
+21) BS içinde en çok kullanılan yapılardan birisi card yapısıdır.
+
+22) BS içinde responsive bir class olan container var. container class'ı, media query'lere göre boyutu ayarlayan bir class. Çokça kullanılır.
+
+23) jumbotron class'ı ile arka plan verebiliyoruz.
+
+24) Navbar'a fixed-top class'ı vererek, scroll down olma durumunda navbar'ı yukarıya fixlemiş oluyoruz.
+
+25) Bir tag'i bir tuşa bastığımızda gizlemek ve aynı tuşa bastığımızda tekrardan göstermek için BS'in collapse özelliği kullanılabilir.
+
+26) Accordion, BS'e ait çok önemli bir özelliktir. Accordion ile, toggle olayını kullanarak yazıları saklayabiliyoruz.
