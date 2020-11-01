@@ -242,7 +242,7 @@ Padding-bottom ve Padding-top beraber kullanmak için py, Padding-right ve Paddi
 
 21) BS içinde en çok kullanılan yapılardan birisi card yapısıdır.
 
-22) BS içinde responsive bir class olan container var. container class'ı, media query'lere göre boyutu ayarlayan bir class. Çokça kullanılır.
+22) BS içinde responsive bir class olan container var. container class'ı, media query'lere göre boyutu ayarlayan bir class. Çokça kullanılır. container-fluid tüm satırı kaplarken, container satırın yüzde 75'ini kaplıyor.
 
 23) jumbotron class'ı ile arka plan verebiliyoruz.
 
@@ -251,3 +251,23 @@ Padding-bottom ve Padding-top beraber kullanmak için py, Padding-right ve Paddi
 25) Bir tag'i bir tuşa bastığımızda gizlemek ve aynı tuşa bastığımızda tekrardan göstermek için BS'in collapse özelliği kullanılabilir.
 
 26) Accordion, BS'e ait çok önemli bir özelliktir. Accordion ile, toggle olayını kullanarak yazıları saklayabiliyoruz.
+
+27)Carousel ile resimleri kayan şekilde oluşturabiliyoruz.
+
+28)Modal, BS'e ait önemli bir özelliktir. Modal ile, bir butona tıkladığımızda, mevcut html dosyası içinde yeni bir yazı pop up etmesini sağlayabiliyoruz. Butona tıklandığında, login olma işlemi yapılabiir böylece.
+
+29) Tooltip özelliği ile, bir tag'in üzerine geldiğimizde(hover)  sağda veya solda veya yukarıda veya aşağıda bir yazı çımasını sağlayabiliriz.
+
+30) Scrollspy ile tek sayfalık web uygulamaları yapabiliyoruz. Böylece, kullanıcı hangi sayfada olduğunu navbar üzerinden görebiliyor.
+
+31) Popover, tooltip'e çok benziyor. Tooltip ile yapabildiklerimizi, popover ile de yapabiliriz.
+
+32) BS'te responsive özeliği vardır.
+
+33) BS, toplam 12 kolon varmış gibi html sayfasını düşünür.
+
+34) Farklı çözünürlüklerde, genişliği col-sm-4, col-md-6 gibi class'lar ile div'lere verebiliyoruz. col-md-6 şöyle demek: medium ve üzeri size'da, satırın yarısını (6/12) kapla. small ve extra small'da ise hepsini kapla
+
+35) Navbar'da navbar-expand-sm responsive yaparken önemlidir.
+
+36)Jumbotron, header semantik tag'i içine alınabilir.
