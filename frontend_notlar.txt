@@ -271,3 +271,25 @@ Padding-bottom ve Padding-top beraber kullanmak için py, Padding-right ve Paddi
 35) Navbar'da navbar-expand-sm responsive yaparken önemlidir.
 
 36)Jumbotron, header semantik tag'i içine alınabilir.
+
+JavaScript:
+
+1) VSCode için, ES6 javascript ve live server eklentileri kurulmalıdır.
+
+2) JS'te, tek satırlık yorumları // ile, çok satırlı yorumları da /* COMMENT_HERE */ ile oluşturabiliriz.
+
+3) Aşağıdaki satır gibi bir satırı, html koduna gömerek, external bir JS dosyası ile HTML dosyasını ilişkilendirebiliriz.
+
+<script src="script.js" type="text/Javascript"></script>
+
+4) JS ile, HTML sayfasındaki elemanlara müdahele edip değişiklik yapabiliriz.
+
+5) Data type'leri, 2 ana grupta toplayabiliriz: Primitive: String, number, null, undefined, boolean Objects: Array, object, function
+
+6) boolean veya number'ı string yapmak için String fonksiyonu kullanılabilir. String'i number yapmak için de Number fonksiyonu kullanılmalıdır. Null'ı number'a çevirmeye kalarkarsak, 0 sonucu verir. parseInt ile bir float değ
+
+7) bir string'in uzunluğu aşağıdaki kod ile bulunabilir:
+
+var a = 'Abc'
+
+console.log(a.length);
