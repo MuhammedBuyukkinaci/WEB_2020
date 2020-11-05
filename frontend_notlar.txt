@@ -293,3 +293,23 @@ JavaScript:
 var a = 'Abc'
 
 console.log(a.length);
+
+8) parseInt methodu, '10a' stringini 10 sayısına çevirebilirken 'a10a' string'ini 10 sayısına çevirememektedir. Bir string'in numerik bir değere çevirip çevrilmeyeceğini isNaN methodu ile öğrenebiliriz.
+
+9) Matematik ile ilgili fonksiyonlara Math. ile ulaşabiliriz. Örneğin PI, e sayılarına ve log alma,min alma, max alma işlemlerine. Math.random() le 0 ile 1 arasında random bir sayı üretebiliriz. Örneğin web sayfasında rastgele bir resim gönderirken, bu JS fonksiyonunu kullanabiliriz.
+
+10) String ifade ile numerik ifadeler + operatörü ile birleştirilebilir.
+
+var a = 'a';
+var b = 'b';
+var c = 35;
+consoloe.log(a + b + c);
+
+11) String'in x'inci elemanını bulamk için string[x] yazabiliriz. String'in başındaki ve sonundaki boşluk karakterinden kurtulmak için trim methodu kullanılabilir.
+
+12) Bir string'in içindeki tüm aynı pattern'i değiştirmek için aşağıdaki gibi bir kod kullanılır.
+
+var string = "elma armut kiraz elma nar";
+console.log(string.replace(/elma/g,'karpuz'));
+
+13) Javasctipt'teki template literals işlemi, python'daki f string'e benzemektedir.
