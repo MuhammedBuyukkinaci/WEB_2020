@@ -313,3 +313,34 @@ var string = "elma armut kiraz elma nar";
 console.log(string.replace(/elma/g,'karpuz'));
 
 13) Javasctipt'teki template literals işlemi, python'daki f string'e benzemektedir.
+
+14) Dizinin elemanları, python'daki list gibi farklı türler alabilir.
+
+15) iki diziyi birleştirmek için concat methodu kullanılır.
+
+var list_merged = list1.concat(list2)
+
+16) Bir list'in içerisindeki belli bir kısım elemanları bir koşula göre filtrelemek için filter methodu kullanılabilir.
+
+//over18 methodu true dönenleri filter ediyor
+let filtered = list_used.filter(over18);
+
+17) and ve or'u sırasıyla && ve || ile elde edebiliriz.
+
+18) Aşağıdaki gibi bir kod ile, browser'da bir uyarının pop up etmesini sağlayabiliriz. prompt ile, browser üzerinde kullanıcının bir şey girmesini sağlayabiliriz.
+
+var val = prompt("who is there?");
+
+19) JS'teki object literal kavramı, python'daki dict kavramına karşılık gelmektedir. Bir object lietral, aşağıdaki gibi oluşturulabilir.
+
+let person= {
+    firstname: 'cinar',
+    lastname: 'cinar2'    
+}
+
+20) JS'teki this ile python'daki self benzerdir.
+console.log(val);
+
+21) DB'den gelen bilgiler, bize object literal formatında geliyor.
+
+
