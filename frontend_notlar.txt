@@ -343,4 +343,26 @@ console.log(val);
 
 21) DB'den gelen bilgiler, bize object literal formatında geliyor.
 
+22) Array'ler için for loop yerine for-in ve forEach methodu kullanılabilir.
 
+23) Tanımlanan bir fonksiyonu, az parametre ile call edersek NaN değer döner; çok parametre ile caall edersek ise çalışır.
+
+24)ES6 ile, bir fonksyona default bir değer verebiliriz.
+
+25) arguments key sözcüğü ile bir fonksiyona gönderilen parametrelerin hepsine bir array'in içindeymiş gibi ulaşabiliriz.
+
+26) Primitive data types are value-types and the rest(object etc.) are reference types.
+
+27) Bizim JS kodunda tanımladığımız değişkenler, window object'inin bir elemanı oluyorlar. window.location ve window.navigator ile tarayıcı ile alakalı bazı ekstra bilgilere ulaşabiliriz.
+
+28) Alert ile prompt arasındaki fark şudur: Alert'de browser'da bir uyarı gösteririz, prompta ise hem bir uyarı gösteririz hem de kullanıcının bir bilgi girmesini talep ederiz. Aynı şekilde, confirm methodu da alert ve prompta benzemektedir ve teyit amaçlı kullanılabilir.
+
+29) Tanımladığımız global değişkenlere, tüm fonksiyonlar ve değişkenler ulaşabilir. Fonksiyonlar ise kendi scope'larını oluştururlar. Block'lar(if else, do while etc.) ise kendi scope'larını oluşturmazlar.
+
+30) ES6 JS'de, block içinde let ve const ile tanımlanan variable'lara dışarıdan ulaşılmaz. Let ve const, var'a göre daha fazla kullanılmalıdır. Let'i for loop veya while loop ile kullanmak mantıklıdır.
+
+31) Aşağıdaki yapıya, document object model (DOM) denir:
+
+window > document > html (root element) > head & body (element) > title,meta in head & h1,a in body 
+
+32)
