@@ -365,4 +365,43 @@ console.log(val);
 
 window > document > html (root element) > head & body (element) > title,meta in head & h1,a in body 
 
-32)
+32)HTML sayfasındaki TEK bir elemana aşağıdaki gibi ulaşabiliriz:
+val = document.getElementById('id_h1');
+console.log(val);
+
+33) innertext'te bir html tag'inin içindeki text'i değiştirebiliyoruz. InnerHTML'de ise bu tag'in içindeki kodu değiştirebiliyoruz.
+
+34)document.querySelector('') ile de class'ına göre, id'sine göre veya da tag'ine göre sadece İLK tag'e ulaşabiliyoruz.
+
+35) Class name'ine göre aynı class'a sahip tüm elemanları seçmek için aşağıdaki gibi bir kod yazarız. Bu da HTMLCollection türü bir şey döner:
+
+document.getElementsByClassName();
+
+36) Aynı şekilde, multiple element's class namine göre veya da tag'ine göre ulaşmak için document.querySelectorAll() kullanabiliriz.
+
+37) Bir elemanın altındaki tüm elemanları .children ile ulaşabiliriz ve remove fonksiyonu ile bu elemanı silebiliriz
+
+removed_item = document.querySelector('#id_ul');
+
+removed_item.children[1].remove();
+
+38) Event- Listener kullanımı aşağıdaki gibidir. Id'si li2 olan li'nin üzerine mouseover olduğunda, btnclick fonksiyonu çalışıyor.
+
+const btn2 = document.querySelector('#li2')
+
+btn2.addEventListener('mouseover',btnclick)
+
+39) Eventler, mouse ve keyboard event'leri olarak 2'ye ayrılabilir. Örnğin bir butonun üzerine mouse ile tıkladığımızda, sayfanın arka plan renginin değişmesini mouse event'leri ile yapabiliriz. Veya da bir arama çubuğunda bir tuşa basıldığında sayfadaki bir tag'in size'ının büyümesi ise keyboard item'leri ile yapabiliriz.
+
+40) Event bubbling: İçte meydana gelen bir event'in kendi dışındaki event'leri de tetikler. Örneğin, div içindeki ul içindeki li içindeki a'ya ait bir event olduğunda(click - dblclick etc), sırayla bu yukarıdaki event'leri de etkiler. Nerede duracağını ise e.stopPropagation() ile yazabiliyoruz.
+
+41) Event Capturing: Event bubbling'in dıştan içe olanıdır. Bunu aktif hale getirmek için addEventListener methodunun 3. parametresi false olmalıdır. Bubling olayını kullanmak biraz daha mantıklı.
+
+a.addEventListener('click',function(e){
+    console.log('a');
+},true);
+
+42) Belirli bir kapsam içinde bir olay eklenip, o kapsam içinde bulunan elemanları e.target ile kontrol edip, istediğimiz elemana ulaşabiliriz.
+
+43) Bilgileri, browser hafızasına eklemek için localstorage ve sessionstorage kullanılabilir. Localstorage daha uzun ömürlüdür, browser kapansa da verileri tutar. Sessionstorage ise browser kapandığında siler.
+
