@@ -405,3 +405,6 @@ a.addEventListener('click',function(e){
 
 43) Bilgileri, browser hafızasına eklemek için localstorage ve sessionstorage kullanılabilir. Localstorage daha uzun ömürlüdür, browser kapansa da verileri tutar. Sessionstorage ise browser kapandığında siler.
 
+44) Bir elemanın üst elemanlarına .parentElement attribute'ü ile ulaşabiliriz.
+
+45) setTimeout fonksiyonu ile, belli bir saniye sonra, bir olayı TEK sefer tetikleyebiliyoruz. setInterval fonksiyonu ile clearInterval fonksiyonu ile durdurulmadığı mühletçe SÜREKLİ tetiklenen bir fonksiyondur.
