@@ -408,3 +408,129 @@ a.addEventListener('click',function(e){
 44) Bir elemanın üst elemanlarına .parentElement attribute'ü ile ulaşabiliriz.
 
 45) setTimeout fonksiyonu ile, belli bir saniye sonra, bir olayı TEK sefer tetikleyebiliyoruz. setInterval fonksiyonu ile clearInterval fonksiyonu ile durdurulmadığı mühletçe SÜREKLİ tetiklenen bir fonksiyondur.
+
+Advanced JavaScript:
+
+1) Object literal da array de bir object'tir. İkisi de object olmalarından ötürü proto method'larını kullanabilirler.
+
+2)Aşağıdaki gibi bir constructor tanımlayabiliriz:
+
+function Person(name,birthday,job){
+    this.name = name;
+    this.birthday = birthday;
+    this.job = job;
+}
+
+let ogrenci = Person('Ali',1990,'doctor');
+
+3) Prototype kısmına alınan özellikler ve fonksiyon objeye özeldir.
+
+4) Built in constructor'ların prototype'larının içine istediğimiz method'ları ekleyebiliriz.
+
+5) Örneğin A class'ından B class'ını ürettik. Hem A'nın hem B'nin özelliklerini içeren bir C class'ı üretmek için C'yi B classından üretebiliriz.
+
+6) Objeler STACK'te adres tuttuğu için, birbirinin kopyası olan 2 objeden birini değiştirdiğimizde, HEAP'teki aynı adresin üzerindeki bilgiyi değiştirdiğimiz için ikisi de değişir.
+
+var obj1 = {name: 'a', age: 20};
+var obj2 = obj1;
+obj1.name = 'b';
+
+//they are same
+console.log(obj1);
+console.log(obj2);
+
+7) Bir fonksiyonu, bir fonksiyonun içine argument olarak gönderebiliriz. Argument olarak gönderilen callback fonksiyonu, anonymous fonksiyon olarak da yazılabilir.
+
+function MultiplyByTwo(a,b,c,callback){
+    let arr = [];
+    for(let i=0; i <3; i++){
+        arr[i] = callback(arguments[i]*2);
+    }
+    return arr;
+}
+
+function addOne(a){
+    return a + 1;
+}
+
+console.log(MultiplyByTwo(3,4,5,addOne));
+
+8) Bir fonksiyon, fonksiyon return edebilir.
+
+9) Hata olması beklenen kısmı try içine almak, hata olduğunda yapılacak işlemleri ise catch kısmına alınır. finally ise try kısmında hata almadığımız durumda, haliyle catch kısmına girmediği için bazı mesajları göstermek istediğimiz zaman kullanırız.
+
+try{
+	console.log(myfunc());
+}
+catch(e){
+	console.log(e);
+	console.log(e.message);//hata objesinin mesaj kısmı
+	console.log(e.name);//hatanın türü
+	console.log(e instanceof ReferenceError);//return true	
+	console.log(e instanceof TypeError);//return true	
+}
+
+10) Error türleri: ReferenceError, TypeError, SyntaxError, URIError vb.
+
+11) ES6 ile, fonksyion tanımlarken, =>'i function yazmak yerine kullanabiliriz.
+
+12) Concatenating 2 arrays. Spread operatörü ... dür.
+
+let arr1 = ['two','three'];
+let arr2 = ['one','four','five'];
+
+arr1.push(...arr2);//sona eklemek
+console.log(arr1);
+
+arr1.unshift(...arr2);//başa eklemek
+console.log(arr1);
+
+13) ES6 ile birlikte, tek bir satırda, birden fazla variable tanımlayabiliriz:
+
+const arrconfig = ['localhost','8080','900'];
+
+const [server,port,timeout] = arrconfig;
+
+const objconfig = {server:'localhost',port:8080,timeout:900};
+
+const {server,port,timeout} = objconfig;
+
+14) JS'e ES6 ile gelen Map objesi, python'daki dictionary'ye çok benzer.
+
+let val;
+
+const numbers_map = new Map();
+numbers_map.set(1,'one');
+numbers_map.set(2,'two');
+numbers_map.set(3,'three');
+
+value_1 = numbers.get(1);
+
+15) JS'teki Set objesi, python'daki set'e çok benzemektedir.
+
+var mySet = new Set();
+
+mySet.add(1);
+mySet.add(2);
+mySet.add(1);//not added because it is also available
+
+16) ES6'da class aşağıdaki gibi tanımlanır:
+
+class PersonES6{
+    constructor(name,job,birthyear){
+        this.name = name;
+        this.job = job;
+        this.birthyear = birthyear;
+    }
+
+    calculateAge(){
+        return new Date().getFullYear() - this.birthyear;
+    }
+}
+
+var emel = new PersonES6('emel','teacher',1990);
+console.log(emel.calculateAge());
+
+17) Class içinde tanımlanan STATIC fonksiyonlara object(instance) üzerinden ulaşılmaz. Static methodları, bir helper method oluşturmak istediğimizde, DB'ye bağlanıp veri eklemek veya silmek istediğimizde,
+
+
