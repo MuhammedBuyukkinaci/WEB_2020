@@ -1,0 +1,23 @@
+[
+    {
+        "firstname":"a",
+        "lastname":"b",
+        "age":19,
+        "retired":false
+    
+    },
+    {
+        "firstname":"c",
+        "lastname":"d",
+        "age":19,
+        "retired":false
+    
+    },
+    {
+        "firstname":"e",
+        "lastname":"f",
+        "age":19,
+        "retired":false
+    
+    }
+]

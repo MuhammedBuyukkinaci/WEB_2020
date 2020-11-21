@@ -409,6 +409,12 @@ a.addEventListener('click',function(e){
 
 45) setTimeout fonksiyonu ile, belli bir saniye sonra, bir olayı TEK sefer tetikleyebiliyoruz. setInterval fonksiyonu ile clearInterval fonksiyonu ile durdurulmadığı mühletçe SÜREKLİ tetiklenen bir fonksiyondur.
 
+46) Bir tag'in başlangıcının öncesine veya sonrasına, sonunun öncesine ya da sonrasına bir HTML etiketi ekleyebiliyoruz. Bunu da insertAdjacentHTML ile yapabiliyoruz.
+
+const row = document.querySelector('.row');
+//beforebegin, afterbegin, beforeend, afterend
+row.insertAdjacentHTML('beforeBegin',alert);
+
 Advanced JavaScript:
 
 1) Object literal da array de bir object'tir. İkisi de object olmalarından ötürü proto method'larını kullanabilirler.
@@ -531,6 +537,78 @@ class PersonES6{
 var emel = new PersonES6('emel','teacher',1990);
 console.log(emel.calculateAge());
 
-17) Class içinde tanımlanan STATIC fonksiyonlara object(instance) üzerinden ulaşılmaz. Static methodları, bir helper method oluşturmak istediğimizde, DB'ye bağlanıp veri eklemek veya silmek istediğimizde,
+17) Class içinde tanımlanan STATIC fonksiyonlara object(instance) üzerinden ulaşılmaz. Static methodları, bir helper method oluşturmak istediğimizde, DB'ye bağlanıp veri eklemek veya silmek istediğimizde kullanmalıyız.
 
+18) Class isimlerini büyük harfle başlatmak, JS'te bir convenience'tır.
+
+19) JS'te asenkron işlemleri, 1) Callback 2) Promise 3) Async/ Await ile yapabiliyoruz.
+
+20) Client Servera HttpRequest gönderir, Server da buna istinaden bir HttpResponse gönderir.
+
+21) AJAX, JS'te bir XmlHttpRequest objesidir. Client'tan Server'a gönderilir. Veri tabanı ise buna istinaden bir XML/JSON vs. bir response gönderir. Böylece, server'ı bloklamayan bir request oluşturabiliyoruz.
+
+22) XmlHttpRequest objesinin readyState property'si aşağıdakilerden bir tanesi olabilir:
+
+0: request not initialized
+1: server connection established
+2: request received
+3: processing request
+4: request finished and response is ready
+
+23) XmlHttpRequest objesinin status property'si aşağıdakilerden bir tanesi olabilir:
+
+200: "OK"
+403: "Forbidden"
+404: "Not Found"
+
+24) JSON veya XML kullanmamızın sebebi, DB'den çekilen veriyi ORTAK bir veri yapısında tutmak ve MOBİL veya MASAÜSTÜ veya WEB uygulaması üzerinden müşteriye gösterebilmektir.
+
+25) AJAX klasöründeki 03_app.html dosyası ile bir json dosyasının içeriğini HTML içerisinde gösterebiiyoruz.
+
+26) https://jsonplaceholder.typicode.com/ sitesinde ücretsiz GET API elde edebiliyoruz.
+
+27) GET ve POST, REST API için kullanılan söz dizimleridir.
+
+28) Asenkron programlama için Promise ve Callback kullanabiliriz. Promise'ı, çok sayıda callback yerine kullanılan bir yapıdır. Promise, ardışık olarak server'a gönderdiğimiz sorguların ard arda hangisinin hangisinden sonra yapılacağını söyleyen bir yöntem.
+
+29) Fetch API kullanmak, Callback ve Promise'a göre daha fazla tavsiye edilen bir yöntemdir.
+
+26) Module mantığı, bir uygulamanın birden fazla js dosyası içermesi ile alakalıdır.
+
+27) Bizim modül kullanmamızın sebeplerini şöyle sıralayabiliriz:
+
+1) Farklı scriptler aynı değişken isimlerine sahip olabilir.
+
+2) Encapsulation
+
+3) IIFE: Immediately invoded function expressions
+
+28) Bir fonksiyonun içinde tanımlanan değişkenler private'tır. Ama return ile dönen bir obje ise public'tir.
+
+function my_func(){
+	//private area
+
+	return {
+	//public area
+	}
+
+}
+
+29) Yazılan modülü dışarıda da kullandırabilmek için bir değişken içine atmalıyız.
+
+30) Module'ler de birbiri üzerinden extend edilebilir(inheritance).
+
+31) Bir controller, aşağıdaki gibi oluşturulur. ProductCtrl ve UICtrl input parametreleridir. ProductController,UIController ise bizim fonksiyona gönderdiğimiz değerlerdir.
+
+const AppController = (function(ProductCtrl, UICtrl){
+
+})(ProductController,UIController);
+
+32) Bir JS dosyası yazarken, querySelector içinde kullanılan string'leri, scriptin başında bir obje içerisinde tanımlayıp daha sonrasında oradan çağırıp kullanmak mantıklıdır. Böylece, bir değişiklik yaptığımızda, tüm script'in sadece başındaki objenin içeriğini değiştirmek yeterli olur.
+
+33) Bir etikete aşağıdaki gibi class ekleyebiliyoruz:
+
+addClass('bg-warning')
+
+34)
 

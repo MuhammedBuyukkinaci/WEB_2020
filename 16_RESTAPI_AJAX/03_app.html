@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        crossorigin="anonymous">
+
+        <link rel="stylesheet" href="style03.css">
+
+    <script src="https://kit.fontawesome.com/6839b859a8.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col">
+                <button id="getEmployee" class="btn btn-primary">Get employee</button>
+
+                <div id="loading">
+                    <img src="loading.gif" alt="" width="100">
+                </div>
+
+                <table class = "mt-3 table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>First name</th>
+                            <th>Last name</th>
+                            <th>Age</th>
+                            <th>Retired</th>
+                        </tr>
+                    </thead>
+                    <tbody id="employees">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" crossorigin="anonymous">
+    </script>
+
+    <script src="script03.js" type="text/Javascript"></script>
+
+</body>
+
+</html>
