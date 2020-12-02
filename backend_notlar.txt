@@ -1,0 +1,123 @@
+1) Dotnet MVC projesinde, Startup.cs dosyasından routing ayarları ayarlanır. Aşağıdaki satıra göre, default controller = Home, default action methodu da Index'tir. id ise optional'dır. Olursa da olur, olmasa da.
+
+localhost:5000/Home/Index
+
+pattern: "{controller=Home}/{action=Index}/{id?}");
+
+2) Controller'dan 1 view döndürmek için, aşağıdaki gibi bir kod olmalı. Eğer ki controller'dan string döndürmek istiyorsak, 2. gibi bir kod olmalı.
+
+//1
+public IActionResult Index()
+{
+    return View();
+}
+
+//2
+
+public string Index()
+{
+    return "returned string";
+}
+
+3) Controller içinde viewbag içinde tuttuğumuz bir değeri, view'e gönderebiliyoruz. Dynamic veri aktarımı.
+
+{
+
+//bir controller'ın içi
+
+int saat = Datetime.Now.Hour;
+
+ViewBag.Greeting = saat>12?"İyi günler":"Günaydın";
+
+ViewBag.UserName = "Ahmet";
+
+}
+
+view içinde ise @ViewBag.Greeting yazarak kullanabiliyoruz.
+
+4) Models içinde bir tane Class(Product) tanımlandıktan sonra, controller'ın içindeki IActionResult methodlarından birinin içinde, bu class'tan bir object instantiate edilir. Bu method'un return kısmındaki View(defined_object) koyulur. Böylece, bu object view'e gönderilir.
+
+Gönderilen view'in de en üstüne aşağıdaki gibi bir satır yazılır:
+
+@model shopapp.webui.Models.Product
+
+cshtml içinde kullanırken de @Model.Name gibi kullanılabilir. Name, Product class'ının bir property'sidir.
+
+5) Bir Model aşağıdaki gibi tanımlanabilir. Dosyanın ismi Product.cs'tir.
+
+namespace shopapp.webui.Models
+
+{
+public class Product
+{
+	public string Name {get; set;}
+	public double Price {get; set;}
+	public string Description {get; set;}
+}
+}
+
+6)View'e 3 farklı yol ile veri gönderebiliyoruz: ViewBag, Model ve ViewData. Controller içinde aşağıdaki gibi bir product oluşturduktan sonra bu product'ı ViewData içine koyuyoruz. Daha sonrasında ise bu konulan şeyi, @ViewData["Product"] ile view içinde kullanabiliyoruz. ViewData["Product"]'u kullanabilmek için cast etmemiz gerekiyor. ViewBag'de ise cast işlemi yapmak zorunda değiliz. View içinde ViewBag, ViewData ve Modeli beraber kullanabiliriz.
+
+//in controller action method:
+
+var product = new Product {Name: "iphone x",Price = 5000, Description = "iyi telefon"};
+ViewData["Product"] = product;
+ViewData["Category"] = "category";
+
+//in related view:
+<h1> @ViewData["Category"] </h1> 
+<h1> @( ((Product)ViewData["Product"]).Name ) </h1>
+
+7) Her view'e sadece 1 tane model gönderilebilir. Bu sebeple, eğer ki çoklu model göndermek istiyorsak, bunlar paketlemeliyiz ve öyle göndermeliyiz. Bu duruma ViewModel denir. Ana dizine ViewModels isimli bir klasör eklenir. Bu klasörün altına .cs uzantılı bir dosya oluşturulur. Bu dosyanın içinde 1 class tanımlanır. Bu class'ın altına da Models altında tanımlanan 2 class (Product ve Category) ın instance'larını içeren 2 propert oluşturulur.
+
+8) Razor ile, bir view(.cshtml dosyasının içine) içinde değişken tanımlayabiliyoruz ve c# kodu yazabiliyoruz(for loop if else vs.). Bunu cshtml'in üst tarafında @ ve kıvrımlı parantezler içinde yapıyoruz.
+
+@model ProductViewModel
+
+@{
+	var products = Model.Products
+}
+
+9) Partial view için shared klasörü altında _ ile başlayan bir cshtml dosyası oluşturulur(örneğin: _navbar.cshtml). Partial view, Birden fazla view tarafından kullanılabilir. Örneğin bu partial view navbar'ı içeriyor olsun. Daha sonra başka bir View içinde bu partial view'i aşağıdaki gibi kullanabiliriz(aşağıdaki partial ile yazılan kod da await ile yazılanın aynısı, partial ile yazabilmek için Shared altındaki _ViewImports.cshtml içine @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers eklenmiş olmalı ):
+
+@await Html.PartialAsync("_navbar")
+
+veya:
+
+<partial name = 'navbar'>
+
+10)ViewComponent için, ana dizinin altında ViewComponents isimli bir klasör oluşturulur. Bu klasörün içinde CategoriesViewComponent.cs gibi class'lar oluşturulur. Bu class'ın içinde Invoke() isimli bir method tanımlanır( public IViewComponentResult Invoke() ) Daha sonrasında, ViewComponent'in view'lerini ekleyebilmek için, Shared klasörü altında, Components klasörü oluşturulur. Sonrada ViewComponent'in ismine eşit olan bir klasör daha içerde oluşturulur. Sonra da Default.cshtml dosyası oluşturulur.
+
+11) Bir view'in, bir layout cshtml dosyasını kullanmaması için, view'in ilk satırlarına aşağıdaki kod yazılmalı.
+@{
+    Layout = null;
+}
+
+12) Views klasörü altındaki _ViewStart.cshtml dosyası, aşağıdaki içeriği içerir. Böylece, tüm view'lerde aşağıdaki içeriği yazmaya gerek kalmaz.
+@{
+    Layout = "_Layout";
+}
+
+13) _Layout.cshtml dosyasının içinde @RenderSection("MessageBox",false) isimli bir kod yazılır. false yazılmalı ki eğer ki başka bir view, section'ı içermiyorsa hata vermesin. Daha sonrasında ise kullanmak istediğimiz bu section'ı, ilgili view'in cshtml dosyasının içine aşağıdaki gibi koyuyoruz:
+
+@section MessageBox
+{
+	<div class = "alert alert-success text-center m-0"> 
+		you have a message !!
+	</div>
+}
+
+14) Layout içinde IsSectionDefined("MessageBox") kullanılabilir.
+
+15) wwwroot altındaki dosyaları kullanabilmek için, Startupcs içindeki Configure methodu içine aşağıdaki kod eklenmelidir:
+
+app.UseStaticFiles();
+
+16) Eğer ki wwwroot dışında başka bir klasörü projede static files olarak kullanmak için yine Configure methodu içinde aşağıdaki gibi bir kod yazılmalıdır. Microsoft'un dökümanına bakılabilir.
+
+//add using Microsoft.Extensions.FileProviders
+app.UseStaticFiles(new StaticFileOptions{
+	FileProvider = new PhysicalFileProvider( Path.Combine(Directory.GetCurrentDirectory(),"node_modules" ),RequestPath="/modules" ),
+})
+
+17) Projeye package.json dosyası eklemek işlerimizi kolaylaştırır.
