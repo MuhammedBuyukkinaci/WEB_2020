@@ -1,3 +1,5 @@
+0) .net core extension pack isimli extension, vs code marketplace'ten indirilmelidir.
+
 1) Dotnet MVC projesinde, Startup.cs dosyasından routing ayarları ayarlanır. Aşağıdaki satıra göre, default controller = Home, default action methodu da Index'tir. id ise optional'dır. Olursa da olur, olmasa da.
 
 localhost:5000/Home/Index
@@ -121,3 +123,9 @@ app.UseStaticFiles(new StaticFileOptions{
 })
 
 17) Projeye package.json dosyası eklemek işlerimizi kolaylaştırır.
+
+18) Terminal ile projeye bir Nuget paketi eklemek için, root dizinde aşağıdaki gibi bir command çalıştırılabilir:
+
+dotnet add package Newtonsoft.Json --version 12.0.3
+
+19)
